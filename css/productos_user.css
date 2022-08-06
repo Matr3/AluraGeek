@@ -1,0 +1,144 @@
+.productos_contenedor{
+    background: #E5E5E5;
+}
+.productos_all{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 16px 10%;
+}
+.productos_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+}
+.title_similar{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 61px;
+    color: #464646;
+}
+.articulos_descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 64px ;
+    justify-content: space-between;
+    
+}
+.articulo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+}
+.articulo_edicion{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-left: 6rem;
+    position: absolute;
+    
+}
+.position_icon{
+    padding: 5px;
+}
+.icon{
+    width: 14;
+    height: 18;
+}
+.lista_descripcion{
+    padding-bottom: 32px;
+}
+.title_full__productos{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #464646;
+}
+.btn_todo__productos{
+    color: #FFFFFF;
+    width: 163px;
+    height: 51px;
+    background: #2A7AE4;
+    border-style: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+.btn_todo__productos:hover{
+    background: #5595E9;
+}
+.nombre_producto{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+    /*align-self: stretch;*/
+}
+.precio_producto{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+    align-self: stretch;
+}
+.number_producto{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+}
+@media screen and (max-width:1280px){
+    .productos_all{
+        padding: 16px 4%;
+    }
+}
+@media screen and (max-width:768px){
+    .img {
+        width: 164px;
+        height: 174px;
+    }
+}
+@media screen and (max-width:360px){
+    .productos_title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .title_similar{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        color: #464646;
+    }
+    .img {
+        width: 155px;
+        height: 174px;
+    }
+    .articulo_edicion{
+        padding: 0.75rem;
+        margin-left: 5rem;
+       
+        
+    }
+}
+
