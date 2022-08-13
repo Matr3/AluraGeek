@@ -1,17 +1,17 @@
 //Fetch API
 const listaClientes = () =>{
-    return fetch("http://localhost:3000/perfil").then(respuesta =>{
+    return fetch("https://matr3.github.io/AluraGeek/perfil").then(respuesta =>{
         return respuesta.json();
     });
 };
 const listaProductos = () =>{
-    return fetch("http://localhost:3000/prod").then(respuesta =>{
+    return fetch("https://matr3.github.io/AluraGeek/prod").then(respuesta =>{
         return respuesta.json();
     });
 };
 
 const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
-    return fetch("http://localhost:3000/prod", {
+    return fetch("https://matr3.github.io/AluraGeek/prod", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -22,18 +22,18 @@ const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_p
 
 const eliminarCliente = (id) =>{
     console.log("eliminar a", id)
-    return fetch(`http://localhost:3000/perfil/${id}`, {
+    return fetch(`https://matr3.github.io/AluraGeek/perfil/${id}`, {
         method: "DELETE"
     })
 }
 
 const detalleCliente = (id) =>{
-    return fetch(`http://localhost:3000/perfil/${id}`)
+    return fetch(`https://matr3.github.io/AluraGeek/perfil/${id}`)
     .then( (respuesta) => respuesta.json())
 }
 
 const actualizarCliente = (nombre,email,id) =>{
-    return fetch(`http://localhost:3000/perfil/${id}`,{
+    return fetch(`https://matr3.github.io/AluraGeek/perfil/${id}`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({nombre,email})
