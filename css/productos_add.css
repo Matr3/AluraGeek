@@ -25,10 +25,17 @@
     font-size: 32px;
     line-height: 38px;
     color: #464646;
+    padding-bottom: 15px;
 }
 .input-container{
     padding: 16px 0;
 }
+.form-control{
+    min-height: calc(1.5em + (1rem + 2px));
+    padding: 0.9rem 1rem;
+    font-size: 1.2rem;
+}
+
 .input{
     padding-left: 10px;
     width: 549px;

@@ -139,14 +139,13 @@
                     <form action="#" class="contacto_form">
                         <fieldset>
                             <legend class="title_contacto">Hable con nosotros</legend>
-                            <input class="input_nombre" type="text" placeholder="Nombre">
+                            <input class="input_nombre" type="text" placeholder="Nombre" required data-tipo="nombre" pattern="[\s\S]{4,40}">
                             <label for="nombre"></label>
-                            <input class="input_mensaje" type="text" placeholder="Escribe tu mensaje">
+                            <input class="input_mensaje" type="text" placeholder="Escribe tu mensaje" required data-tipo="mensaje" pattern="[\s\S]{5,120}">
                             <label for="mensaje"></label>
                         </fieldset>
                         <button class="btn_contacto">Enviar mensaje</button>
                     </form>
-                    
                 </div>
             </div>
                         
@@ -155,6 +154,6 @@
             <h4 class="desarrollo">Desarrollado por Marcelo Tremari 2022</h4>  
         </div>
     </footer>
-<script src=""></script>
+<script type="module" src="./js/validacion_rodapie.js"></script>
 </body>
 </html>

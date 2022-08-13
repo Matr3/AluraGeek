@@ -1,0 +1,31 @@
+{
+  "perfil": [
+    {
+      "nombre": "Admin",
+      "email": "admin@admin.com",
+      "password": "Admin2022",
+      "id": 1
+    },
+    {
+      "nombre": "Admin1",
+      "email": "admin1@admin.com",
+      "password": "Admin2022",
+      "id": 2
+    },
+    {
+      "nombre": "Admin2",
+      "email": "admin2@admin.com",
+      "password": "Admin2022",
+      "id": 3
+    }
+  ],
+  "prod": [
+    {
+      "imagen": "null",
+      "categoria": "consola",
+      "nombre_prod": "null",
+      "precio_prod": "null",
+      "descripcion_prod": "null"
+    }
+  ]
+}
