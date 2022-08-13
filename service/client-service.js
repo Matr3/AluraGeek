@@ -14,7 +14,13 @@ const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_p
     return fetch(("https://my-json-server.typicode.com/Matr3/AluraGeek/prod"),{
         method: "POST",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({imagen, categoria, nombre_prod, precio_prod, descripcion_prod})
+        body: JSON.stringify({
+            imagen,
+            categoria,
+            nombre_prod,
+            precio_prod,
+            descripcion_prod
+        })
     })
 }
 
