@@ -14,7 +14,7 @@ formulario.addEventListener("submit", (evento) =>{
         
         for(let i = 0; i < user.length; i++){
             if(user[i].email == email && user[i].password == password){
-                window.location.href = "AluraGeek/productos.html";
+                window.location.href = "./productos.html";
                 break;
             }else{
                 document.querySelector(".input-login-error").style.display = "block";
