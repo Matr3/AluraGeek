@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/productos_add.css">
     <link rel="stylesheet" href="./css/flexbox.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/productos_add.css">
     <link rel="stylesheet" href="./css/rodapie.css">
     
 </head>
@@ -42,9 +42,19 @@
             <fieldset>
                 <legend class="title_addProducto">Agregar nuevo producto</legend>
 
+
+                <div class="agregar__form__imagen">
+                    <div class="agregar__imagen-div" id="box__imagen"></div>
+                    <label for="input__imagen" class="input__image-label"> Elegir archivo</label>
+                    <input type="file" class="agregar__imagen input" id="input__imagen" data-input="imagen_agregar_producto" accept="image/*">
+                </div>
+                <div class="falta__carga__archivo">
+                    <span class="mensaje__error archivo__faltante">Debe seleccionar un archivo de imagen para cargar en el producto</span>
+                </div>
+                <!--
                 <label for="formFileLg" class="input-label"></label>
                 <input class="form-control input" id="formFileLg" type="file" required data-tipo="imagen_prod">
-                
+                -->
                 <div class="input-container">
                     <input name="categoria" id="categoria" class="input" type="text" placeholder="Categoria" required data-tipo="categoria">
                     <label class="input-label" for="categoria"></label>

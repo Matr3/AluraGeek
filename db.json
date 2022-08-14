@@ -21,7 +21,7 @@
   ],
   "prod": [
     {
-      "imagen": "null",
+      "fileImagen": "null",
       "categoria": "consola",
       "nombre_prod": "null",
       "precio_prod": "null",

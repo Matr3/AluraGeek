@@ -10,12 +10,12 @@ const listaProductos = () =>{
     });
 };
 
-const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
+const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
     return fetch(("https://my-json-server.typicode.com/Matr3/AluraGeek/prod"),{
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-            imagen,
+            fileImagen,
             categoria,
             nombre_prod,
             precio_prod,
