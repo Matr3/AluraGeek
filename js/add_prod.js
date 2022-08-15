@@ -46,7 +46,7 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         .then((respuesta) => {
             console.log(respuesta)
             //console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
-            window.location.href ="productos.html"
+            //window.location.href ="productos.html"
         }).catch((error) => console.log(error));
 
     }
