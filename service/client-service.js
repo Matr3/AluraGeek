@@ -4,11 +4,7 @@ const listaClientes = () =>{
         return respuesta.json();
     });
 };
-const listaProductos = () =>{
-    return fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/prod").then(respuesta =>{
-        return respuesta.json();
-    });
-};
+const listaProductos = () => fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/prod").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
     return fetch(("https://my-json-server.typicode.com/Matr3/AluraGeek/prod"),{
