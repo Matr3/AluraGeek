@@ -44,7 +44,8 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         listaServices
         .crearCliente(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
         .then((respuesta) => {
-            window.location.href ="productos.html"
+            console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
+            //window.location.href ="productos.html"
         }).catch((error) => console.log(error));
 
     }
