@@ -1,4 +1,5 @@
 //Fetch API
+const url = "https://my-json-server.typicode.com/Matr3/AluraGeek/prod";
 const listaClientes = () =>{
     return fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/perfil").then(respuesta =>{
         return respuesta.json();
@@ -7,10 +8,10 @@ const listaClientes = () =>{
 const listaProductos = () => fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/prod").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
-    return fetch(("https://my-json-server.typicode.com/Matr3/AluraGeek/prod"),{
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
+    return fetch((`${url}`),{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
             fileImagen,
             categoria,
             nombre_prod,
