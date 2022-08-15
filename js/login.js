@@ -1,4 +1,11 @@
-import { clientServices } from "../service/client-service.js";
+//import { clientServices } from "../service/client-service.js";
+
+const usuarios = [
+    {email:"admin@admin.com",
+    password:"Admin2022"},
+    {email:"tremari.marce@gmail.com",
+    password:"Trem@ri1980"}
+];
 
 const formulario = document.querySelector("[data-form]");
 
@@ -7,12 +14,10 @@ formulario.addEventListener("submit", (evento) =>{
     const email = document.querySelector("[data-tipo=email]").value;
     const password = document.querySelector("[data-tipo=password]").value;
 
-    clientServices
-    .listaClientes()
-    .then((respuesta) =>{
-        const user = respuesta;
-        
+    const user = usuarios;
+
         for(let i = 0; i < user.length; i++){
+            
             if(user[i].email == email && user[i].password == password){
                 window.location.href = "./productos.html";
                 break;
@@ -21,8 +26,5 @@ formulario.addEventListener("submit", (evento) =>{
             }
         }
     })
-    .catch((err) => console.log(err));
 
-
-});
 

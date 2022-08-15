@@ -1,5 +1,6 @@
 //Fetch API
 const url = "https://my-json-server.typicode.com/Matr3/AluraGeek/prod";
+
 const listaClientes = () =>{
     return fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/perfil").then(respuesta =>{
         return respuesta.json();

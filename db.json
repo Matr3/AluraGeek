@@ -1,32 +1,12 @@
 {
-  "perfil": [
-    {
-      "nombre": "Admin",
-      "email": "admin@admin.com",
-      "password": "Admin2022",
-      "id": 1
-    },
-    {
-      "nombre": "Admin1",
-      "email": "admin1@admin.com",
-      "password": "Admin2022",
-      "id": 2
-    },
-    {
-      "nombre": "Admin2",
-      "email": "admin2@admin.com",
-      "password": "Admin2022",
-      "id": 3
-    }
-  ],
   "prod": [
-    {
-      "fileImagen": "",
-      "categoria": "",
-      "nombre_prod": "",
-      "precio_prod": "",
-      "descripcion_prod": "",
-      "id": "1"
-    }
+      {
+        "fileImagen": "",
+        "categoria": "",
+        "nombre_prod": "",
+        "precio_prod": "",
+        "descripcion_prod": "",
+        "id": "1"
+      }
   ]
 }
