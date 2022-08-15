@@ -9,6 +9,7 @@ const listaClientes = () =>{
 const listaProductos = () => fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/prod").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
+    console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
     return fetch((`${url}`),{
         method:"POST",
         headers:{"Content-Type":"application/json"},
@@ -18,6 +19,7 @@ const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripci
             nombre_prod,
             precio_prod,
             descripcion_prod
+      
         })
     })
 }
