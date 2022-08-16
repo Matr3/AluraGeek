@@ -8,7 +8,10 @@ formulario.addEventListener("submit", (evento) =>{
     const email = document.querySelector("[data-tipo=email]").value;
     const password = document.querySelector("[data-tipo=password]").value;
 
-    const user = usuarios;
+   clientServices
+    .listaClientes()
+    .then((respuesta) =>{
+        const user = respuesta;
 
         for(let i = 0; i < user.length; i++){
             
