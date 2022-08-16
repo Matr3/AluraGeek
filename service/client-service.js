@@ -1,12 +1,12 @@
 //Fetch API
-const url = "https://my-json-server.typicode.com/Matr3/AluraGeek/prod";
+const url = "https://62faaedbffd7197707f152a5.mockapi.io/prod";
 
 const listaClientes = () =>{
     return fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/perfil").then(respuesta =>{
         return respuesta.json();
     });
 };
-const listaProductos = () => fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/prod").then((respuesta) => respuesta.json()).catch((error) => error);
+const listaProductos = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/prod").then((respuesta) => respuesta.json()).catch((error) => error);
 
 const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
     console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
