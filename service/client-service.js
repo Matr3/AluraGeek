@@ -2,7 +2,7 @@
 const url = "https://62faaedbffd7197707f152a5.mockapi.io/prod";
 
 const listaClientes = () =>{
-    return fetch("https://my-json-server.typicode.com/Matr3/AluraGeek/perfil").then(respuesta =>{
+    return fetch("https://62faaedbffd7197707f152a5.mockapi.io/user").then(respuesta =>{
         return respuesta.json();
     });
 };
@@ -26,18 +26,18 @@ const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripci
 
 const eliminarCliente = (id) =>{
     console.log("eliminar a", id)
-    return fetch(`https://my-json-server.typicode.com/Matr3/AluraGeek/perfil/${id}`, {
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`, {
         method: "DELETE"
     })
 }
 
 const detalleCliente = (id) =>{
-    return fetch(`https://my-json-server.typicode.com/Matr3/AluraGeek/perfil/${id}`)
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`)
     .then( (respuesta) => respuesta.json())
 }
 
 const actualizarCliente = (nombre,email,id) =>{
-    return fetch(`https://my-json-server.typicode.com/Matr3/AluraGeek/perfil/${id}`,{
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({nombre,email})
