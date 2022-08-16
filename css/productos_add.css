@@ -41,13 +41,13 @@
 
 .agregar__form__imagen{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .agregar__imagen-div{
     background-image: url("../img/no-img-photo.jpg");
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     display: flex;
     width: 100%;
@@ -58,11 +58,21 @@
 .input__image-label{
     display: flex;
     align-items: center;
-    justify-content: center;
-    border: 1px solid var(--azul);
-    color: var(--azul);
-    width: 100%;
+    justify-content: space-around;
+    color: #FFFFFF;
+    background: #2A7AE4;
+    border-style: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 0 1rem;
+    width: 90%;
     height: 50px;
+}
+.input__image-label:hover{
+    background: #5595E9;
 }
 
 input[type="file"]#input__imagen{
@@ -112,21 +122,30 @@ input[type="file"]#input__imagen{
 .btn_agregar:hover{
     background: #5595E9;
 }
+.top_limit{
+    margin-top: 2rem;
+}
 .mensaje__error{
     display: none;
 }
 
 .input__invalido .mensaje__error{
     display: block;
-    color: var(--color-error);
+    color: red;
 }
 
 
 .input__invalido .input{
-    border: 1px solid var(--color-error);
+    border: 1px solid red;
 }
 
 @media screen and (max-width:768px){
+    .agregar__form__imagen{
+        flex-direction:column;
+    }
+    .input__image-label{
+        width: 100%;
+    }
     .btn_admin{
         width: 144px;
         height: 40px;
@@ -137,7 +156,7 @@ input[type="file"]#input__imagen{
         width: 95%;
     }
     .input, .input_descripcion{
-        width: 96%;
+        width: 100%;
      
     }
     .btn_agregar {

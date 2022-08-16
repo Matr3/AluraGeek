@@ -5,20 +5,20 @@ y deja la URL del archivo para usar luego*/
 
 const btnAgregarImagen = document.querySelector(".agregar__imagen");
 
-let fileImagen = "";
+let imagen = "";
 
 btnAgregarImagen.addEventListener('change', cargar);
 
 function cargar(ev) {
     var arch = new FileReader();
     arch.readAsDataURL(ev.target.files[0]);
-    /*fileImagen = ev.target.files[0];*/
+    /*imagen = ev.target.files[0];*/
     arch.addEventListener('load',leer);
 }
 
 function leer(ev) {
     document.getElementById('box__imagen').style.backgroundImage = "url('" + ev.target.result + "')";
-    fileImagen = ev.target.result;
+    imagen = ev.target.result;
     document.querySelector(".archivo__faltante").parentElement.classList.remove("input__invalido");
 }
 
@@ -30,7 +30,7 @@ const formAgregarProducto = document.querySelector(".formulario_contenedor");
 formAgregarProducto.addEventListener("submit", (evento) => {
     evento.preventDefault();
 
-    if(!fileImagen){
+    if(!imagen){
         
         document.querySelector(".archivo__faltante").parentElement.classList.add("input__invalido");
 
@@ -42,11 +42,11 @@ formAgregarProducto.addEventListener("submit", (evento) => {
         const descripcion_prod = document.querySelector("[data-tipo=descripcion_prod]").value;
         
         listaServices
-        .crearCliente(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
+        .crearCliente(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
         .then((respuesta) => {
             console.log(respuesta)
-            //console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
-            window.location.href ="productos.html"
+            //console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
+            //window.location.href ="productos.html"
         }).catch((error) => console.log(error));
 
     }

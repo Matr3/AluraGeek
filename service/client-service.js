@@ -8,13 +8,13 @@ const listaClientes = () =>{
 };
 const listaProductos = () => fetch("https://62faaedbffd7197707f152a5.mockapi.io/prod").then((respuesta) => respuesta.json()).catch((error) => error);
 
-const crearCliente = (fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
-    console.log(fileImagen, categoria, nombre_prod, precio_prod, descripcion_prod)
+const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod) => {
+    console.log(imagen, categoria, nombre_prod, precio_prod, descripcion_prod)
     return fetch((`${url}`),{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({
-            fileImagen,
+            imagen,
             categoria,
             nombre_prod,
             precio_prod,
