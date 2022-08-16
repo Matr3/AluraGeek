@@ -1,11 +1,5 @@
-//import { clientServices } from "../service/client-service.js";
+import { clientServices } from "../service/client-service.js";
 
-const usuarios = [
-    {email:"admin@admin.com",
-    password:"Admin2022"},
-    {email:"tremari.marce@gmail.com",
-    password:"Trem@ri1980"}
-];
 
 const formulario = document.querySelector("[data-form]");
 
