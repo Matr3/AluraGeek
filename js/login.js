@@ -22,6 +22,9 @@ formulario.addEventListener("submit", (evento) =>{
                 document.querySelector(".input-login-error").style.display = "block";
             }
         }
-    })
+    }).catch((err) => console.log(err));
+
+
+});
 
 
