@@ -4,7 +4,6 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     const linea = document.createElement("div");
     const contenido = `
     <div class="articulo">
-    Hola
     <div class="articulo_edicion">
         <a class="position_icon" href="#"><img class="icon" src="./img/editar.png" alt=""></a>
         <a class="position_icon" href="#"><img class="icon" src="./img/borrar.png" alt=""></a>
