@@ -26,7 +26,7 @@ const crearCliente = (imagen, categoria, nombre_prod, precio_prod, descripcion_p
 
 const eliminarCliente = (id) =>{
     console.log("eliminar a", id)
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`, {
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/:id`, {
         method: "DELETE"
     })
 }
@@ -55,7 +55,7 @@ export const clientServices = {
     actualizarCliente,
 }
 export const listaServices = {
-    
+    eliminarCliente,
     listaProductos,
     crearCliente,
 }

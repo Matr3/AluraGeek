@@ -7,8 +7,9 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     <div class="articulo">
     <div class="bng_box">
     <div class="articulo_edicion">
-        <a class="position_icon" href="#"><img class="icon" src="./img/editar.png" alt=""></a>
-        <a class="position_icon" href="#"><img class="icon" src="./img/borrar.png" alt=""></a>
+        <a class="position_icon" href="editar_productos.html?id=${id}""><img class="icon" src="./img/editar.png" alt=""></a>
+        
+        <a class="position_icon del" id="${id}" href=""><img class="icon" src="./img/borrar.png" alt=""></a>
     </div>
     <img class="img" src="${imagen}" alt="Imagen del producto">
     </div>
@@ -22,18 +23,18 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     </div>
     `;
     linea.innerHTML = contenido;
-    /*
-    const btn = linea.querySelector("button");
+    
+    const btn = linea.querySelector(".del");
     btn.addEventListener("click", () => {
       const id = btn.id;
-      clientServices
+      listaServices
         .eliminarCliente(id)
         .then((respuesta) => {
           console.log(respuesta);
         })
         .catch((err) => alert("Ocurrió un error"));
     });
-  */
+  
     return linea;
   };
 
