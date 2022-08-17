@@ -37,6 +37,7 @@
     align-items: flex-start;
     padding: 0px;
     gap: 16px;
+    min-width: 176px;
 }
 .articulo_edicion{
     display: flex;
@@ -109,11 +110,15 @@
     max-width: 176px;
     max-height: 174px;
 }
+.bng_box{
+    background: #969696;
+}
 @media screen and (max-width:1280px){
     .productos_all{
         padding: 16px 4%;
     }
 }
+
 @media screen and (max-width:768px){
     .img {
         width: 164px;
