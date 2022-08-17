@@ -36,7 +36,7 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
   };
 
   
-const div = document.querySelector("[data-productos]");
+const div = document.querySelector("[data-producto]");
 
 listaServices
   .listaProductos()
