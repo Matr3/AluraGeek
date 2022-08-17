@@ -105,6 +105,10 @@
     line-height: 16px;
     color: #464646;
 }
+.img {
+    max-width: 176px;
+    max-height: 174px;
+}
 @media screen and (max-width:1280px){
     .productos_all{
         padding: 16px 4%;
