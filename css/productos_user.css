@@ -107,11 +107,9 @@
     color: #464646;
 }
 .img {
+    background: #969696;
     max-width: 176px;
     max-height: 174px;
-}
-.bng_box{
-    background: #969696;
 }
 @media screen and (max-width:1280px){
     .productos_all{
