@@ -2,6 +2,7 @@ import { listaServices } from "../service/client-service.js";
 //backticks
 const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     const linea = document.createElement("div");
+    linea.classList.add('.bng_box');
     const contenido = `
     <div class="articulo">
     <div class="articulo_edicion">
