@@ -46,4 +46,4 @@ listaServices
       div.appendChild(nuevaLinea);
     });
   })
-  .catch((error) => alert("Ocurrió un error"));
+  .catch((error) => alert(error));
