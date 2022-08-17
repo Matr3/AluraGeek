@@ -45,5 +45,5 @@ listaServices
       div.appendChild(nuevaLinea);
     });
   })
-  .catch((error) => alert(error));
-  console.log(error);
+  .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+  
