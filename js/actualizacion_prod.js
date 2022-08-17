@@ -1,9 +1,10 @@
 import { listaServices } from "../service/client-service.js";
 //backticks
-const crearNuevaLinea = (imagen,categoria,nombre_prod,precio_prod,id) => {
+const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     const linea = document.createElement("div");
     const contenido = `
     <div class="articulo" data-producto>
+    Hola
     <div class="articulo_edicion">
         <a class="position_icon" href="#"><img class="icon" src="./img/editar.png" alt=""></a>
         <a class="position_icon" href="#"><img class="icon" src="./img/borrar.png" alt=""></a>
@@ -33,3 +34,16 @@ const crearNuevaLinea = (imagen,categoria,nombre_prod,precio_prod,id) => {
   */
     return linea;
   };
+
+  
+const div = document.querySelector("[data-productos]");
+
+listaServices
+  .listaProductos()
+  .then((data) => {
+    data.forEach(({ imagen,nombre_prod,precio_prod,id }) => {
+      const nuevaLinea = crearNuevaLinea(imagen,nombre_prod,precio_prod,id);
+      div.appendChild(nuevaLinea);
+    });
+  })
+  .catch((error) => alert("Ocurrió un error"));
