@@ -31,16 +31,16 @@ const eliminarCliente = (id) =>{
     })
 }
 
-const detalleCliente = (id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/${id}`)
+const detalleProducto = (id) =>{
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/${id}`)
     .then( (respuesta) => respuesta.json())
 }
 
-const actualizarCliente = (nombre,email,id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/${id}`,{
+const actualizarProducto = (imagen, categoria, nombre_prod, precio_prod, descripcion_prod,id) =>{
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/prod/${id}`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({nombre,email})
+        body: JSON.stringify({imagen, categoria, nombre_prod, precio_prod, descripcion_prod})
     })
     .then( (respuesta) => respuesta)
     .catch( (err) => console.log(err));
@@ -51,11 +51,12 @@ export const clientServices = {
  
     
     eliminarCliente,
-    detalleCliente,
-    actualizarCliente,
+    
 }
 export const listaServices = {
     eliminarCliente,
     listaProductos,
     crearCliente,
+    actualizarProducto,
+    detalleProducto,
 }
