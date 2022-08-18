@@ -58,5 +58,5 @@ export const listaServices = {
     listaProductos,
     crearCliente,
     actualizarProducto,
-    detalleProducto,
+    detalleProducto
 }
