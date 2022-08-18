@@ -34,8 +34,8 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
       listaServices
         .eliminarCliente(id)
         .then((respuesta) => {
-          console.log(id)
-          //window.location.href = "./productos.html";
+          
+          window.location.href = "./productos.html";
         })
         .catch((err) => alert("Ocurrió un error"));
     });

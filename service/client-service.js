@@ -32,12 +32,12 @@ const eliminarCliente = (id) =>{
 }
 
 const detalleCliente = (id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`)
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/${id}`)
     .then( (respuesta) => respuesta.json())
 }
 
 const actualizarCliente = (nombre,email,id) =>{
-    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/:id`,{
+    return fetch(`https://62faaedbffd7197707f152a5.mockapi.io/user/${id}`,{
         method: "PUT",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({nombre,email})
