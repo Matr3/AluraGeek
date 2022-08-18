@@ -116,10 +116,10 @@
     height: 174px;
     background: #000000;
 }
-.img_icon{
-    width: 25px;
-    height: 25px;
-    border:0;
+.btn_borrar{
+    background: transparent;
+    border: none;
+    
     
 }
 

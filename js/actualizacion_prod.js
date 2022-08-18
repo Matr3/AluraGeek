@@ -7,13 +7,8 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
     <div class="articulo">
     <div class="bng_box">
     <div class="articulo_edicion">
-        <a class="position_icon" href="editar_productos.html?id=${id}""><img class="icon" src="./img/editar.png" alt=""></a>
-        
-        <button class="position_icon img_icon" type="button" id="${id}">
-        B
-        </button>
-
-        
+        <a class="position_icon" href="editar_productos.html?id=${id}"><img class="icon" src="./img/editar.png" alt=""></a>
+        <button type="button" id="${id}" class="btn_borrar"><img src="./img/borrar.png"/></button>
     </div>
     <img class="img" src="${imagen}" alt="Imagen del producto">
     </div>
@@ -34,8 +29,8 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
       listaServices
         .eliminarCliente(id)
         .then((respuesta) => {
-          
-          window.location.href = "./productos.html";
+          console.log(respuesta)
+          //window.location.href = "./productos.html";
         })
         .catch((err) => alert("Ocurrió un error"));
     });
