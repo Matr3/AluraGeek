@@ -17,7 +17,7 @@ const crearNuevaLinea = (imagen,nombre_prod,precio_prod,id) => {
             <li class="nombre_producto">${nombre_prod}</li>
             <li class="precio_producto">${precio_prod}</li>
             <li class="number_producto">${id}</li>
-        </ul>   C
+        </ul>
     </div>
     </div>
     `;
