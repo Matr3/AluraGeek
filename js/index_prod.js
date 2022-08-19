@@ -29,13 +29,18 @@ const div_sw = document.querySelector("[data-producto-sw]");
 const div_cl = document.querySelector("[data-producto-cl]");
 const div_dv = document.querySelector("[data-producto-dv]");
 
+let cont_sw = "0";
+let cont_cl = "0";
+let cont_dv = "0";
+
 listaServices
   .listaProductos()
   .then((data) => {
     data.forEach(({ imagen, categoria, nombre_prod, precio_prod, id }) => {
-      if(categoria === starwars){
+      if(categoria === starwars && cont_sw < 6){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_sw.appendChild(nuevaLinea);
+        cont_sw++;
       }
       if(categoria === consolas){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
