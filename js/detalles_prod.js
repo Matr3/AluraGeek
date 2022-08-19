@@ -1,13 +1,13 @@
 import { listaServices } from "../service/client-service.js";
 
-const url = new URL (window.location);
+const url = new URL(window.location);
 const id = url.searchParams.get("id");
 
 console.log(id)
 //backticks
 const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod) => {
     const linea = document.createElement("div");
-    
+
     const contenido = `
     <div>
         <img class="img_producto" src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
@@ -18,25 +18,62 @@ const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod) => 
         <p class="descripcion_prod">${descripcion_prod}</p>
     </div>
     `;
+
     linea.innerHTML = contenido;
-  
+
     return linea;
-  };
+};
 
-  
+const crearSimilitud = (imagen, nombre_prod, precio_prod) => {
+    const linea_2 = document.createElement("div");
+
+    const contenido_2 =`
+    <div class="contenedor block_principal">
+        <img class="img_class" src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
+        <div>
+            <ul>
+                <li class="nombre_producto">${nombre_prod}</li>
+                <li class="precio_producto">${precio_prod}</li>
+                <li><a class="link_producto" href="#">Ver producto</a></li>
+            </ul>  
+        </div>
+    </div>
+    `;
+    linea_2.innerHTML = contenido_2;
+
+    return linea_2;
+};
+
+
 const div = document.querySelector("[data-detalle]");
-
+const div_1 = document.querySelector("[data-similar]");
 
 
 listaServices
-.detalleProducto(id)
-  .then((data) => {
-    
-      const nuevaLinea = crearNuevaLinea(data.imagen, data.nombre_prod, data.precio_prod, data.descripcion_prod);
-      div.appendChild(nuevaLinea).className = "div_acd";
-    
-  })
-  .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
+    .detalleProducto(id)
+    .then((data) => {
 
+        const nuevaLinea = crearNuevaLinea(data.imagen, data.nombre_prod, data.precio_prod, data.descripcion_prod);
+        div.appendChild(nuevaLinea).className = "div_acd";
 
+    })
+    .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
 
+let cont = 0;
+
+listaServices
+    .listaProductos()
+    .then((data) => {
+      data.forEach(({ imagen, nombre_prod, precio_prod}) => {
+        if (screen.width > 768 && cont < 6) {
+            const nuevaLinea = crearSimilitud(imagen, nombre_prod, precio_prod,);
+            div_1.appendChild(nuevaLinea);
+            cont++
+        }else if (screen.width <= 768 && cont < 4) {
+            const nuevaLinea = crearSimilitud(imagen, nombre_prod, precio_prod,);
+            div_1.appendChild(nuevaLinea);
+            cont++
+        }
+    });
+})
+.catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
