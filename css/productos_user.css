@@ -134,6 +134,12 @@
         width: 164px;
         height: 174px;
     }
+    .bgn_box{
+        width: 100%;
+    }
+    .articulo{
+        min-width: 100%;
+    }
 }
 @media screen and (max-width:360px){
     .productos_title {
@@ -152,6 +158,9 @@
     .img {
         width: 155px;
         height: 174px;
+    }
+    .articulo{
+        min-width: 100%;
     }
     .articulo_edicion{
         padding: 0.75rem;
