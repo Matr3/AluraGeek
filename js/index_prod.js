@@ -37,17 +37,17 @@ listaServices
   .listaProductos()
   .then((data) => {
     data.forEach(({ imagen, categoria, nombre_prod, precio_prod, id }) => {
-      if(categoria == starwars && cont_sw <= 5){
+      if(categoria === starwars && cont_sw <= 5){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_sw.appendChild(nuevaLinea);
         cont_sw++;
       }
-      if(categoria == consolas && cont_cl <= 5){
+      if(categoria === consolas && cont_cl <= 5){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_cl.appendChild(nuevaLinea);
         cont_cl++;
       }
-      if(categoria == diversoss && cont_dv <= 5){
+      if(categoria === diversoss && cont_dv <= 5){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_dv.appendChild(nuevaLinea);
         cont_dv++;
