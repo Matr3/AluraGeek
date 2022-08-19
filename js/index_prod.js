@@ -42,7 +42,7 @@ listaServices
         div_sw.appendChild(nuevaLinea);
         cont_sw++;
       }
-      if(categoria === consolas && cont_cl < 6{
+      if(categoria === consolas && cont_cl < 6){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_cl.appendChild(nuevaLinea);
         cont_cl++;
