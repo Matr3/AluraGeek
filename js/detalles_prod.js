@@ -33,7 +33,7 @@ listaServices
   .then((data) => {
     
       const nuevaLinea = crearNuevaLinea(data.imagen, data.nombre_prod, data.precio_prod, data.descripcion_prod);
-      div.appendChild(nuevaLinea);
+      div.appendChild(nuevaLinea).className = "div_acd";
     
   })
   .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));

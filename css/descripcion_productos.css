@@ -103,6 +103,13 @@
     line-height: 19px;
     color: #2A7AE4;
 }
+/*Estilo del div appendChild */
+.div_acd{
+    display: flex;
+}
+.detalles{   
+    margin: 50px 16px;
+}
 @media screen and (max-width:1024px) {
     .block_1{
         display: none;
