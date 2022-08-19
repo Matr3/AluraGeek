@@ -37,7 +37,7 @@ listaServices
   .listaProductos()
   .then((data) => {
     data.forEach(({ imagen, categoria, nombre_prod, precio_prod, id }) => {
-      if(categoria === starwars && cont_sw < 6){
+      if(categoria === starwars && cont_sw < 4){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_sw.appendChild(nuevaLinea);
         cont_sw++;
