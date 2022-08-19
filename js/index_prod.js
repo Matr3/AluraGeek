@@ -47,7 +47,7 @@ listaServices
         div_cl.appendChild(nuevaLinea);
         cont_cl++;
       }
-      if(categoria === diversoss && cont_dv < 6){
+      if(categoria === diversos && cont_dv < 6){
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
         div_dv.appendChild(nuevaLinea);
         cont_dv++;
