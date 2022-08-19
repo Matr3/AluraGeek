@@ -29,9 +29,9 @@ const div_sw = document.querySelector("[data-producto-sw]");
 const div_cl = document.querySelector("[data-producto-cl]");
 const div_dv = document.querySelector("[data-producto-dv]");
 
-let cont_sw = "0";
-let cont_cl = "0";
-let cont_dv = "0";
+let cont_sw = 0;
+let cont_cl = 0;
+let cont_dv = 0;
 
 listaServices
   .listaProductos()
