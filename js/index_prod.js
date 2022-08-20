@@ -1,12 +1,12 @@
 import { listaServices } from "../service/client-service.js";
 //backticks
-const crearNuevaLinea = (imagen, nombre_prod, precio_prod, id) => {
+const crearNuevaLinea = (imagen, categoria, nombre_prod, precio_prod, id) => {
   const linea = document.createElement("div");
 
   const contenido = `
   <div class="contenedor block_principal">
-    <a class="link_producto" href="./descripcion_productos.html?id=${id}">
-    <img src="${imagen}" alt="">
+    <a class="link_producto" href="./descripcion_productos.html?id=${id}&categoria=${categoria}">
+    <img src="${imagen}" alt="${nombre_prod}">
     <div>
       <ul>
         <li class="nombre_producto">${nombre_prod}</li>
@@ -39,34 +39,34 @@ listaServices
     data.forEach(({ imagen, categoria, nombre_prod, precio_prod, id }) => {
       if (screen.width > 768) {
         if (categoria === starwars && cont_sw < 6) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_sw.appendChild(nuevaLinea);
           cont_sw++;
         }
         if (categoria === consolas && cont_cl < 6) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_cl.appendChild(nuevaLinea);
           cont_cl++;
         }
         if (categoria === diversos && cont_dv < 6) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_dv.appendChild(nuevaLinea);
           cont_dv++;
         }
       }
       else if (screen.width <= 768) {
         if (categoria === starwars && cont_sw < 4) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_sw.appendChild(nuevaLinea);
           cont_sw++;
         }
         if (categoria === consolas && cont_cl < 4) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_cl.appendChild(nuevaLinea);
           cont_cl++;
         }
         if (categoria === diversos && cont_dv < 4) {
-          const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, id);
+          const nuevaLinea = crearNuevaLinea(imagen, categoria, nombre_prod, precio_prod, id);
           div_dv.appendChild(nuevaLinea);
           cont_dv++;
         }

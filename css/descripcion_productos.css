@@ -11,6 +11,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 /*Estilos Css*/
@@ -110,6 +111,9 @@
 .detalles{   
     margin: 50px 16px;
 }
+.contenedor{
+    width: 174px;
+}
 @media screen and (max-width:1024px) {
     .block_1{
         display: none;
@@ -177,6 +181,11 @@
         justify-content: center;
         flex-direction: column;
         padding-bottom: 16px;
+    }
+    /*Estilo del div appendChild */
+    .div_acd{
+        align-items: center;
+        flex-direction: column;
     }
     
 }

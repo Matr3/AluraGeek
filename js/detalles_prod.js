@@ -2,8 +2,10 @@ import { listaServices } from "../service/client-service.js";
 
 const url = new URL(window.location);
 const id = url.searchParams.get("id");
+const cate = url.searchParams.get("categoria");
 
-console.log(id)
+let cont = 0;
+
 //backticks
 const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod) => {
     const linea = document.createElement("div");
@@ -24,20 +26,22 @@ const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod) => 
     return linea;
 };
 
-const crearSimilitud = (imagen, nombre_prod, precio_prod) => {
+const crearSimilitud = (imagen, categoria, nombre_prod, precio_prod, id) => {
     const linea_2 = document.createElement("div");
 
     const contenido_2 =`
     <div class="contenedor block_principal">
-        <img class="img_class" src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
-        <div>
-            <ul>
-                <li class="nombre_producto">${nombre_prod}</li>
-                <li class="precio_producto">${precio_prod}</li>
-                <li><a class="link_producto" href="#">Ver producto</a></li>
-            </ul>  
-        </div>
+    <a class="link_producto" href="./descripcion_productos.html?id=${id}&categoria=${categoria}">
+    <img src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
+    <div>
+      <ul>
+        <li class="nombre_producto">${nombre_prod}</li>
+        <li class="precio_producto">${precio_prod}</li>
+        <li>Ver producto</li>
+      </ul>   
     </div>
+    </a>
+ </div>
     `;
     linea_2.innerHTML = contenido_2;
 
@@ -59,20 +63,24 @@ listaServices
     })
     .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
 
-let cont = 0;
+
+
+    
 
 listaServices
     .listaProductos()
     .then((data) => {
-      data.forEach(({ imagen, nombre_prod, precio_prod}) => {
-        if (screen.width > 768 && cont < 6) {
-            const nuevaLinea = crearSimilitud(imagen, nombre_prod, precio_prod,);
-            div_1.appendChild(nuevaLinea);
-            cont++
-        }else if (screen.width <= 768 && cont < 4) {
-            const nuevaLinea = crearSimilitud(imagen, nombre_prod, precio_prod,);
-            div_1.appendChild(nuevaLinea);
-            cont++
+      data.forEach(({ imagen, categoria, nombre_prod, precio_prod, id}) => {   
+        if(cate == categoria){
+            if (screen.width > 768 && cont < 6) {
+                const nuevaLinea = crearSimilitud(imagen, categoria, nombre_prod, precio_prod, id);
+                div_1.appendChild(nuevaLinea);
+                cont++
+            }else if (screen.width <= 768 && cont < 4) {
+                const nuevaLinea = crearSimilitud(imagen, categoria, nombre_prod, precio_prod, id);
+                div_1.appendChild(nuevaLinea);
+                cont++
+            }
         }
     });
 })
