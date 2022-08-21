@@ -39,7 +39,7 @@ listaServices
           
         if(buscar_prod == nombre_prod){
             document.querySelector(".bloqueo_error").style.display = "none";
-            document.querySelector(".bloqueo_titulo").style.display = "block";
+            document.querySelector(".bloqueo_title").style.display = "block";
             const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
             div.appendChild(nuevaLinea); 
             }
