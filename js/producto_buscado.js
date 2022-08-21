@@ -58,7 +58,7 @@ const div = document.querySelector("[data-producto]");
 listaServices
     .listaProductos()
     .then((data) => {
-        
+        console.log(buscar_prod)
     let incluyeVeinte = data.includes(buscar_prod);
 
         console.log(incluyeVeinte)
