@@ -49,6 +49,8 @@
     min-width: 176px;
 }
 .decoration{
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #464646;
 }
