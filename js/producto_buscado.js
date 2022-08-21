@@ -10,7 +10,7 @@ const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod, bus
 
     const contenido = `
         <div class="articulos_descripcion">
-        <a href="./index.html">
+        <a href="#" class="decoration">
             <div>
                 <img class="img_producto" src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
             </div>
