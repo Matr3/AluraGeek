@@ -42,7 +42,7 @@ listaServices
             const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
             div.appendChild(nuevaLinea); 
             }
-        }
+        
     })
 })
 .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
