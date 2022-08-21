@@ -26,9 +26,8 @@
 }
 .articulos_descripcion{
     display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 64px ;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
     
 }
 .error_box{
@@ -149,8 +148,11 @@
 }
 .bloqueo_title{
   display:none;
+    padding: 36px auto;
 }
-
+.detalles{
+   padding: 0 36px;
+}
 @media screen and (max-width:1280px){
     .productos_all{
         padding: 16px 4%;
