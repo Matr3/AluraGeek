@@ -33,10 +33,11 @@
     border-right: solid 1px;
     border-bottom: solid 2px;
     border-radius: 0 0 15px 0;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0);
     
 }
 .articulos_descripcion:hover{
-    background-color:#91C5FF;
+    background-color:#F0F0F0;
     
 }
 
@@ -55,9 +56,10 @@
 }
 .decoration{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     text-decoration: none;
     color: #464646;
+    height:174px;
 }
 
 .articulo_edicion{
