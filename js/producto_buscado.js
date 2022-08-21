@@ -58,24 +58,16 @@ const div = document.querySelector("[data-producto]");
 listaServices
     .listaProductos()
     .then((data) => {
-        console.log(data.nombre_prod)
-    let incluyeVeinte = data.includes(buscar_prod);
-
-        console.log(incluyeVeinte)
-    
-        console.log(data.filter(nombre_prod => nombre_prod == buscar_prod ));
-        
-      /* data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
+        data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
         console.log(nombre_prod) 
           
-        if(buscar_prod != nombre_prod){
-            
-            const nuevaLinea = crearErrorLinea(buscar_prod);
-                div.appendChild(nuevaLinea);
+        if(buscar_prod == nombre_prod){
+            const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
+            div.appendChild(nuevaLinea); 
         }
-        const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
-            div.appendChild(nuevaLinea);
-        
-        })*/  
+        }
+        const nuevaLinea = crearErrorLinea(buscar_prod);
+        div.appendChild(nuevaLinea);
+        )
 })
 .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
