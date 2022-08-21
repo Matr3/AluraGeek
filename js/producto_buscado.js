@@ -60,7 +60,7 @@ listaServices
     .then((data) => {
       data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
         console.log(nombre_prod)  
-        if(buscar_prod == nombre_prod){
+        if(buscar_prod != nombre_prod){
             
             const nuevaLinea = crearErrorLinea(buscar_prod);
                 div.appendChild(nuevaLinea);
