@@ -32,7 +32,7 @@
     background: lightgray;
     border-right: solid 1px;
     border-bottom: solid 2px;
-    
+    border-radius: 0 0 15px 0;
     
 }
 .error_box{
@@ -55,6 +55,27 @@
     margin-left: 6rem;
     position: absolute;
     
+}
+.nombre_producto{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #464646;
+    /*align-self: stretch;*/
+}
+.precio_producto{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #464646;
+    align-self: stretch;
+}
+.img_producto{
+    vertical-align:botton;
 }
 .position_icon{
     padding: 5px;
