@@ -66,8 +66,8 @@ listaServices
             div.appendChild(nuevaLinea); 
         }
         }
-        const nuevaLinea = crearErrorLinea(buscar_prod);
+        
+        )const nuevaLinea = crearErrorLinea(buscar_prod);
         div.appendChild(nuevaLinea);
-        )
 })
 .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
