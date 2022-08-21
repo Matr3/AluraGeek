@@ -40,7 +40,7 @@ const crearErrorLinea = (buscar_prod) => {
         </div>
         <div class="articulos_descripcion">
             <div>
-                <img class="img_producto" src="../img/errorBusqueda.png" alt="No se encontro ${buscar_prod}">
+                <img class="img_producto" src="./img/errorBusqueda.png" alt="No se encontro ${buscar_prod}">
             </div>
             <div class="detalles">
                 <h1 class="nombre_prod">No se encontro ningun producto con el nombre ${buscar_prod}, realize una nueva busqueda. =)</h1>
@@ -58,16 +58,20 @@ const div = document.querySelector("[data-producto]");
 listaServices
     .listaProductos()
     .then((data) => {
-      data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
-        console.log(nombre_prod)  
-        if(buscar_prod != nombre_prod){
+    
+        console.log(data.filter(nombre_prod => nombre_prod == buscar_prod ));
+        
+      /*data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
+        console.log(nombre_prod) 
+          
+        /*if(buscar_prod != nombre_prod){
             
             const nuevaLinea = crearErrorLinea(buscar_prod);
                 div.appendChild(nuevaLinea);
         }
         const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
             div.appendChild(nuevaLinea);
-         
-        })  
+        */ 
+        })*/  
 })
 .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
