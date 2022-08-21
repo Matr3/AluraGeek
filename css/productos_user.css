@@ -54,6 +54,9 @@
     text-decoration: none;
     color: #464646;
 }
+.decoration:hover{
+    background-color: #AD310B;
+}
 .articulo_edicion{
     display: flex;
     justify-content: space-between;
