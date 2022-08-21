@@ -48,6 +48,10 @@
     gap: 16px;
     min-width: 176px;
 }
+.decoration{
+    text-decoration: none;
+    color: #464646;
+}
 .articulo_edicion{
     display: flex;
     justify-content: space-between;
@@ -77,6 +81,7 @@
 .img_producto{
     vertical-align:botton;
 }
+
 .position_icon{
     padding: 5px;
 }
