@@ -61,13 +61,13 @@ listaServices
       data.forEach(({ imagen, nombre_prod, precio_prod, descripcion_prod}) => { 
         console.log(nombre_prod)  
         if(buscar_prod == nombre_prod){
-            const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
-            div.appendChild(nuevaLinea);   
-        }
-        const nuevaLinea = crearErrorLinea(buscar_prod);
+            
+            const nuevaLinea = crearErrorLinea(buscar_prod);
                 div.appendChild(nuevaLinea);
-          break;
-
+        }
+        const nuevaLinea = crearNuevaLinea(imagen, nombre_prod, precio_prod, descripcion_prod, buscar_prod);
+            div.appendChild(nuevaLinea);
+         
         })  
 })
 .catch((error) => alert("Oops! Error. Comuniquese con Matr3"));
