@@ -66,6 +66,7 @@ listaServices
         }
         const nuevaLinea = crearErrorLinea(buscar_prod);
                 div.appendChild(nuevaLinea);
+          break;
 
         })  
 })
