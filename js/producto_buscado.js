@@ -9,9 +9,6 @@ const crearNuevaLinea = (imagen, nombre_prod, precio_prod, descripcion_prod, bus
     const linea = document.createElement("div");
 
     const contenido = `
-        <div class="productos_title">
-            <h2 class="title_full__productos">Buscar los productos ${buscar_prod}</h2>
-        </div>
         <div class="articulos_descripcion">
             <div>
                 <img class="img_producto" src="${imagen}" alt="Imagen del Producto ${nombre_prod}">
