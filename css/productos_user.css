@@ -39,7 +39,7 @@
     background-color:#4949469;
     transition: all 1s ease-in;
 }
-}
+
 .error_box{
     display: flex;
     flex-direction: row;
