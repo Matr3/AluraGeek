@@ -35,6 +35,11 @@
     border-radius: 0 0 15px 0;
     
 }
+.articulos_descripcion:hover{
+    background-color:#4949469;
+    transition: all 1s ease-in;
+}
+}
 .error_box{
     display: flex;
     flex-direction: row;
@@ -54,9 +59,7 @@
     text-decoration: none;
     color: #464646;
 }
-.decoration:hover{
-    background-color: #AD310B;
-}
+
 .articulo_edicion{
     display: flex;
     justify-content: space-between;
