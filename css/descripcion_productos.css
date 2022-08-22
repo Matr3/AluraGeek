@@ -111,6 +111,9 @@
 .contenedor{
     width: 174px;
 }
+.detalles{
+    padding: 16px 36px;
+ }
 @media screen and (max-width:1024px) {
     .block_1{
         display: none;
