@@ -213,6 +213,11 @@
     .articulo{
         min-width: 100%;
     }
+    .decoration{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
 }
 @media screen and (max-width:360px){
     .productos_title {
